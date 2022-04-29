@@ -93,13 +93,40 @@ public class Main {
          * ■ расчет среднего значения
          */
 
-        Integer [][] array = Matrix.createmass();
-//        Matrix masss = new Matrix(array);
-        Integer[][] array1 = Matrix.multiplication(array);
-        System.out.println(Arrays.deepToString(array1));
-        Integer[][] array01 = Matrix.createmassKeyboard();
-        System.out.println(Arrays.deepToString(array01));
-        Double [][] array2 = Matrix.createmassDouble();
-        System.out.println(Arrays.deepToString(array2));
+        Integer [][] array1 = Matrix.createmass();
+        Matrix masss1 = new Matrix(array1);
+        Integer [][] array11 = (Integer[][]) masss1.multiplicationMatrix();
+        System.out.println("Матрица после умножения: \n" + Arrays.deepToString(array11));
+        Integer [][] array111 = ( Integer[][]) masss1.additionMatrix();
+        System.out.println("Матрица после сложения: \n" + Arrays.deepToString(array111));
+        Integer [][] array1111 = ( Integer[][]) masss1.subtractionMatrix();
+        System.out.println("Матрица после вычитания: \n" + Arrays.deepToString(array1111));
+
+        Double[][] array2 = Matrix.createmassDouble();
+        Matrix masss2 = new Matrix(array2);
+        Double [][] array22 = ( Double[][]) masss2.multiplicationMatrix();
+        System.out.println("Матрица после умножения: \n" + Arrays.deepToString(array22));
+        Double [][] array222 = ( Double[][]) masss2.additionMatrix();
+        System.out.println("Матрица после сложения: \n" + Arrays.deepToString(array222));
+        Double [][] array2222 = ( Double[][]) masss2.subtractionMatrix();
+        System.out.println("Матрица после вычитания: \n" + Arrays.deepToString(array2222));
+
+        masss1.avg();
+        masss2.avg();
+
+        masss1.max_min();
+        masss2.max_min();
+
+
+
+
+
+//        Integer[][] array1 = Matrix.multiplication(array);
+//        System.out.println(Arrays.deepToString(array1));
+//        Integer[][] array01 = Matrix.createmassKeyboard();
+//        System.out.println(Arrays.deepToString(array01));
+//        Double [][] array2 = Matrix.createmassDouble();
+//        System.out.println(Arrays.deepToString(array2));
+
     }
 }
